@@ -1,0 +1,25 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    int x;
+    cout<<"Enter the target value:";
+    cin>>x;
+    vector<int>v;
+    int y ;
+    cout<<"Enter the size of Array:";
+    cin>>y;
+    cout<<"Enter the Array Elemnts:";
+    for(int i=0;i<y;i++){
+        int p;
+        cin>>p;
+        v.push_back(p);
+    }
+    for(int i=0;i<=v.size()-2;i++){
+        for(int j=i+1;j<=v.size()-1;j++){
+            if(v[i]+v[j]==x){
+            cout<<"("<<i<<","<<j<<")"<<endl;
+            }
+        }
+    }
+}
